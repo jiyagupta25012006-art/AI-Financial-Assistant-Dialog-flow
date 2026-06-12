@@ -103,12 +103,12 @@ Provides:
 # 📸 Project Screenshots
 
 ## Budget Planning Intent
-<img src="./Budgeting_ Advice.png" width="1000"/>
+<img src="./Budegting_ Advice.png" width="1000"/>
 
 ---
 
 ## Tax Saving Intent
-<img src="./Tax_saving(1).png" width="1000"/>
+<img src="./Tax_Saving(1).png" width="1000"/>
 
 ---
 
