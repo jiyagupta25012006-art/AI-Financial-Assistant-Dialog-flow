@@ -108,7 +108,7 @@ Provides:
 ---
 
 ## Tax Saving Intent
-<img src="./Tax_Saving(1).png" width="1000"/>
+<img src="./Tax_Saving (1).png" width="1000"/>
 
 ---
 
