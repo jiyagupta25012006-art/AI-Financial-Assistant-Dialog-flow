@@ -1,389 +1,165 @@
-# AI-Financial-Assistant-Dialog-flow
-Conversational AI chatbot built with Dialog flow and Kommunicate to provide budgeting, investment, EMI, and tax-saving guidance.
-# 🏦 AI-Powered Loan Approval Automation using n8n
+# 💬 AI Financial Assistant Chatbot 
 
 ## 📌 Project Overview
 
-This project automates the loan approval process using **n8n**, **Google Sheets**, **JavaScript**, and **Gmail Automation**.
+This project develops an AI-powered financial assistant chatbot using **Dialogflow ES** and **Kommunicate**.
 
-The workflow reads loan application data from Google Sheets, evaluates each applicant based on predefined financial risk assessment rules, classifies applicants into risk categories, generates loan decisions automatically, updates records in real time, and sends approval or rejection notifications through email.
-
-This project demonstrates how workflow automation can be used in financial institutions to streamline lending operations, reduce manual effort, improve consistency, and enhance customer communication.
+The chatbot helps users understand personal finance topics such as budgeting, EMI planning, investment options, and tax-saving strategies.
 
 ---
 
 # 🎯 Objectives
 
-* Automate loan approval decisions
-* Reduce manual processing effort
-* Improve operational efficiency
-* Standardize risk assessment
-* Generate automated email notifications
-* Demonstrate workflow automation in finance
-* Improve decision-making speed
+* Provide financial guidance
+* Improve financial awareness
+* Demonstrate Conversational AI
+* Support personal finance education
 
 ---
 
 # 🏗️ Solution Architecture
 
 ```text
-Google Sheets
+User Query
       ↓
-Loan Application Data
+Dialogflow NLP
       ↓
-n8n Workflow
+Intent Detection
       ↓
-JavaScript Risk Assessment Engine
+Response Generation
       ↓
-Risk Classification
+Kommunicate Interface
       ↓
-Loan Decision
-      ↓
-Update Google Sheet
-      ↓
-Email Notification
+User Response
 ```
 
 ---
 
-# ⚙️ Workflow Process
+# ⚙️ Chatbot Workflow
 
-## Step 1 — Read Applicant Dataset
+### Step 1 — User Sends Query
 
-The workflow extracts applicant information from Google Sheets.
+Examples:
 
-The dataset contains:
+* Budget Planning
+* EMI Calculation
+* Tax Saving
+* Investment Advice
 
-* Applicant Name
-* Credit Score
-* Monthly Income
-* Existing Debt
-* Employment Type
-* Loan Amount
-* Loan Status
+### Step 2 — Intent Detection
 
----
+Dialogflow identifies user intent.
 
-## Step 2 — Execute Risk Assessment Logic
+### Step 3 — Response Generation
 
-A JavaScript code node evaluates each application using predefined business rules.
+Relevant financial guidance is generated.
 
-The system checks:
+### Step 4 — User Interaction
 
-* Creditworthiness
-* Income Stability
-* Debt Burden
-* Repayment Capacity
-* Loan Affordability
+Response displayed through chatbot interface.
 
 ---
 
-## Step 3 — Calculate Risk Category
+# 💰 Budget Planning Intent
 
-Applicants are classified into three categories:
+Provides:
 
-### 🟢 Low Risk
-
-Characteristics:
-
-* Credit Score ≥ 750
-* Stable Income
-* Low Debt-to-Income Ratio
-* Strong Repayment Potential
-
-Decision:
-
-```text
-APPROVED
-```
+* Expense Management
+* Saving Suggestions
+* Budget Planning
 
 ---
 
-### 🟡 Medium Risk
+# 📈 Investment Planning Intent
 
-Characteristics:
+Provides:
 
-* Credit Score between 650 and 749
-* Moderate Debt Burden
-* Requires Manual Review
-
-Decision:
-
-```text
-UNDER REVIEW
-```
+* Investment Basics
+* Risk Understanding
+* Wealth Creation Guidance
 
 ---
 
-### 🔴 High Risk
+# 🏦 EMI Guidance Intent
 
-Characteristics:
+Provides:
 
-* Credit Score Below 650
-* High Existing Debt
-* Weak Repayment Capacity
-
-Decision:
-
-```text
-REJECTED
-```
+* EMI Explanation
+* Loan Repayment Planning
+* Interest Awareness
 
 ---
 
-## Step 4 — Generate Loan Decision
+# 🧾 Tax Saving Intent
 
-Based on risk evaluation, the workflow automatically generates:
+Provides:
 
-* Approved
-* Rejected
-* Under Review
-
-No manual intervention is required.
-
----
-
-## Step 5 — Update Google Sheet
-
-The workflow updates:
-
-* Risk Category
-* Loan Status
-* Approval Decision
-* Processing Timestamp
-
-This ensures that all records remain updated in real time.
-
----
-
-## Step 6 — Send Automated Email Notification
-
-Applicants automatically receive:
-
-### Approval Email
-
-Sent when the loan application meets approval criteria.
-
-### Rejection Email
-
-Sent when the applicant is classified as high risk.
-
-### Review Notification
-
-Sent when additional verification is required.
-
----
-
-# 🧠 Risk Assessment Logic
-
-| Rule | Description                   |
-| ---- | ----------------------------- |
-| R1   | Credit Score Evaluation       |
-| R2   | Income Stability Check        |
-| R3   | Debt-to-Income Ratio Analysis |
-| R4   | Loan Affordability Assessment |
-| R5   | Risk Categorization           |
-| R6   | Decision Generation           |
-
----
-
-# 📊 Risk Classification Matrix
-
-| Credit Score | Risk Level  | Decision     |
-| ------------ | ----------- | ------------ |
-| 750+         | Low Risk    | Approved     |
-| 650–749      | Medium Risk | Under Review |
-| Below 650    | High Risk   | Rejected     |
+* ELSS Information
+* PPF Guidance
+* Section 80C Benefits
 
 ---
 
 # 📸 Project Screenshots
 
-## Google Sheets Dataset
-
-<img src="./screenshots/dataset.png.png" width="1000"/>
-
-The dataset contains applicant details used for loan evaluation and decision-making.
+## Budget Planning Intent
+<img src="./Budgeting_ Advice.png" width="1000"/>
 
 ---
 
-## n8n Workflow Automation
-
-<img src="./screenshots/workflow.png.png" width="1000"/>
-
-The workflow demonstrates:
-
-* Data Extraction
-* Risk Assessment
-* Conditional Routing
-* Google Sheets Update
-* Gmail Automation
+## Tax Saving Intent
+<img src="./Tax_saving(1).png" width="1000"/>
 
 ---
 
-## Loan Approval Email
-
-<img src="./screenshots/approved-email.png.png" width="1000"/>
-
-Automated approval email generated for eligible applicants.
-
----
-
-## Loan Rejection Email
-
-<img src="./screenshots/rejected-email.png.png" width="1000"/>
-
-Automated rejection notification generated for high-risk applicants.
+## Chatbot Demo
+<img src="./Chat_bot.png" width="1000"/>
 
 ---
 
 # 🛠️ Tech Stack
 
-| Technology          | Purpose               |
-| ------------------- | --------------------- |
-| n8n                 | Workflow Automation   |
-| Google Sheets       | Data Storage          |
-| JavaScript          | Risk Assessment Logic |
-| Gmail               | Email Automation      |
-| Financial Analytics | Decision Making       |
-| Risk Assessment     | Loan Evaluation       |
+| Technology               | Purpose             |
+| ------------------------ | ------------------- |
+| Dialogflow ES            | NLP Processing      |
+| Kommunicate              | Chat Interface      |
+| Conversational AI        | User Interaction    |
+| Financial Knowledge Base | Response Generation |
 
 ---
 
 # 📂 Repository Structure
 
 ```text
-AI-Loan-Approval-Automation-n8n/
+AI-Financial-Assistant-Dialogflow/
 │
 ├── README.md
-├── Loan_Approval_Automation.json
+├── Agent_Export.zip
 │
 ├── screenshots/
-│   ├── dataset.png.png
-│   ├── workflow.png.png
-│   ├── approved-email.png.png
-│   └── rejected-email.png.png
-│
-└── dataset/
-    └── Loan_Dataset.xlsx
+│   ├── Budegting_Advice.png
+│   ├── Tax_Saving.png
+│   └── Chat_bot.png
 ```
 
 ---
 
-# 🚀 Run Locally
+# 🚀 How to Run
 
-## Step 1 — Clone Repository
-
-```bash
-git clone https://github.com/your-username/AI-Loan-Approval-Automation-n8n.git
-```
-
----
-
-## Step 2 — Open n8n
-
-```text
-Launch n8n
-      ↓
-Import Workflow JSON
-      ↓
-Configure Credentials
-      ↓
-Connect Google Sheets
-      ↓
-Connect Gmail
-```
-
----
-
-## Step 3 — Import Workflow
-
-Import:
-
-```text
-Loan_Approval_Automation.json
-```
-
----
-
-## Step 4 — Configure Google Sheets
-
-Add Google API credentials and connect the spreadsheet.
-
----
-
-## Step 5 — Configure Gmail
-
-Add Gmail credentials for automated notifications.
-
----
-
-## Step 6 — Execute Workflow
-
-Run the workflow and monitor results in Google Sheets.
-
----
-
-# 📈 Business Impact
-
-This automation provides several business benefits:
-
-### Faster Processing
-
-Reduces loan evaluation time significantly.
-
-### Reduced Manual Work
-
-Automates repetitive tasks.
-
-### Consistent Decision Making
-
-Ensures standardized approval criteria.
-
-### Better Customer Communication
-
-Applicants receive instant notifications.
-
-### Improved Operational Efficiency
-
-Reduces dependency on manual review processes.
+1. Create Dialogflow Agent
+2. Import Agent ZIP
+3. Configure Intents
+4. Connect Kommunicate
+5. Test Chatbot
 
 ---
 
 # 💼 Skills Demonstrated
 
-* Workflow Automation
-* Financial Risk Assessment
-* Loan Processing
-* Business Process Automation
-* Google Sheets Integration
-* Gmail Automation
-* JavaScript Development
-* Financial Analytics
-
----
-
-# 🔮 Future Improvements
-
-* AI-Based Credit Scoring
-* Machine Learning Risk Models
-* Real-Time Dashboard Integration
-* Power BI Reporting
-* API Connectivity
-* Cloud Deployment
-* Predictive Risk Analytics
-
----
-
-# 🎓 Academic Context
-
-**Course:** AI Agents & Automation
-
-**Program:** MBA (Applied Finance)
-
-**Project Type:** Financial Process Automation
-
-**Domain:** Loan Approval & Risk Assessment
+* Conversational AI
+* Natural Language Processing
+* Financial Advisory Systems
+* Chatbot Development
 
 ---
 
@@ -393,15 +169,4 @@ Reduces dependency on manual review processes.
 
 MBA (Applied Finance)
 
-Financial Analytics • Workflow Automation • Risk Assessment • Business Intelligence
-
-GitHub: https://github.com/jiyagupta25012006-art
-
----
-
-# ⭐ Support
-
-If you found this project useful, consider giving it a ⭐ on GitHub.
-
-Your support helps showcase the project and encourages further development.
-
+AI Agents • NLP • Financial Technology
